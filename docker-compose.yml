@@ -1,0 +1,13 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80" # Mapeia a porta 80 do contêiner para a porta 3000 da máquina host
+  
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "4000:4000" # Mapeia a porta 4000 do contêiner para a porta 4000 da máquina host
